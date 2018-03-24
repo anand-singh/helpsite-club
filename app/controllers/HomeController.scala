@@ -1,6 +1,8 @@
 package controllers
 
 import javax.inject._
+
+import domains.Page
 import play.api._
 import play.api.mvc._
 
@@ -17,8 +19,14 @@ class HomeController @Inject() extends Controller {
    * will be called when the application receives a `GET` request with
    * a path of `/`.
    */
-  def index = Action {
-    Ok(views.html.index("Your new application is ready."))
+  def index(page: String = "home") = Action {
+    Page.withName(page) match {
+      case Page.HOME => Ok(views.html.index("Home"))
+      case Page.KNOWLEDGE => Ok(views.html.knowledge("Knowledge"))
+      case Page.BUSINESS => Ok(views.html.business("Business"))
+      case Page.FORUM => Ok(views.html.forum("Forum"))
+      case Page.HIRING => Ok(views.html.hiring("Hiring"))
+    }
   }
 
 }
