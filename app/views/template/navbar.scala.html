@@ -20,20 +20,17 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                @if(pageName == "Knowledge") { @knowledgeMenu() }
+                @if(pageName == "Knowledge") { @pages.knowledge.dropdown(pageName) }
                 @if(pageName == "Business") { @businessMenu() }
                 @if(pageName == "Forum") { @forumMenu() }
                 @if(pageName == "Hiring") { @hiringMenu() }
             </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
+            </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
-
-@knowledgeMenu() = {
-    <li class="active"><a href="#">GST</a></li>
-    <li><a href="#">INCOME TAX</a></li>
-    <li><a href="#">CORPORATE LAW</a></li>
-}
 
 @businessMenu() = {
     <li class="active"><a href="#">Incorporation</a></li>

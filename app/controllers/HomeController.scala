@@ -22,10 +22,10 @@ class HomeController @Inject() extends Controller {
   def index(page: String = "home") = Action {
     Page.withName(page) match {
       case Page.HOME => Ok(views.html.index("Home"))
-      case Page.KNOWLEDGE => Ok(views.html.knowledge("Knowledge"))
-      case Page.BUSINESS => Ok(views.html.business("Business"))
-      case Page.FORUM => Ok(views.html.forum("Forum"))
-      case Page.HIRING => Ok(views.html.hiring("Hiring"))
+      case Page.KNOWLEDGE => Ok(views.html.pages.knowledge.index("Knowledge"))
+      case Page.BUSINESS => Ok(views.html.pages.business.index("Business"))
+      case Page.FORUM => Ok(views.html.pages.forum.index("Forum"))
+      case Page.HIRING => Ok(views.html.pages.hiring.index("Hiring"))
     }
   }
 
