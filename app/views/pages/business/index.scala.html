@@ -9,11 +9,8 @@
  * argument is a `String` with the title of the page, the second
  * argument is an `Html` object containing the body of the page.
  *@
-@main(pageName) {
+@template.main(pageName) {
 
-    @template.navbar(pageName)
     @callout(pageName)
-    @template.about(pageName)
-    @template.actions(pageName)
 
 }

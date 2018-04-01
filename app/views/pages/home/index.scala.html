@@ -1,0 +1,22 @@
+@*
+ * This sections takes a single argument, a String containing a
+ * message to display.
+ *@
+@(pageName: String)
+
+@*
+ * Call the `main` sections with two arguments. The first
+ * argument is a `String` with the title of the page, the second
+ * argument is an `Html` object containing the body of the page.
+ *@
+@template.main("Home") {
+
+    @sections.navbar(pageName)
+    @sections.header(pageName)
+    @sections.about(pageName)
+    @sections.services(pageName)
+    @sections.actions(pageName)
+    @sections.news(pageName)
+    @sections.actions(pageName)
+
+}

@@ -1,0 +1,83 @@
+@*
+* This template takes a single argument, a String containing a pageName.
+*@
+@(pageName: String)
+
+<!-- ===== CONTACT ===== -->
+<section id="contact" class="gray-bg padding-top-bottom">
+
+    <div class="container">
+
+        <h1 class="section-title">Keep in Touch</h1>
+        <p class="section-description">Are you ready to start your business? Give us call or drop us a line.</p>
+
+        <div class="row">
+
+            <div class="col-sm-4 text-center contact-item scrollimation fade-right">
+
+                <a class="icon" href="http://goo.gl/maps/0m7WQ" target="_blank"><i class="fa fa-map-marker fa-fw"></i></a>
+                <h2>Our Location</h2>
+                <p>New Delhi, INDIA</p>
+
+            </div>
+
+            <div class="col-sm-4 text-center contact-item scrollimation fade-up">
+
+                <a class="icon" href="mailto:helpsite@@consultant.com"><i class="fa fa-envelope fa-fw"></i></a>
+                <h2>Send a mail</h2>
+                <p>helpsite@@consultant.com</p>
+
+            </div>
+
+            <div class="col-sm-4 text-center contact-item scrollimation fade-left">
+
+                <a class="icon" href="#link"><i class="fa fa-phone fa-fw"></i></a>
+                <h2>Call us</h2>
+                <p>(+91) 9718788384</p>
+
+            </div>
+
+        </div>
+
+        <h1 class="subsection-title">Drop us a line</h1>
+        <p class="subsection-description">Drop us a line and we will contact you as soon as possible.</p>
+
+        <div class="row">
+
+            <!--=== Contact Form ===-->
+            <form id="contact-form" class="col-sm-6 col-sm-offset-3" action="contact.php" method="post" novalidate>
+
+                <div class="form-group">
+                    <label class="control-label" for="contact-name">Name</label>
+                    <div class="controls">
+                        <input id="contact-name" name="contactName" placeholder="Your name" class="form-control requiredField label_better" type="text" data-error-empty="Please enter your name">
+                        <i class="fa fa-user"></i>
+                    </div>
+                </div><!-- End name input -->
+
+                <div class="form-group">
+                    <label class="control-label" for="contact-mail">Email</label>
+                    <div class=" controls">
+                        <input id="contact-mail" name="email" placeholder="Your email" class="form-control requiredField label_better" type="email" data-error-empty="Please enter your email" data-error-invalid="Invalid email address">
+                        <i class="fa fa-envelope"></i>
+                    </div>
+                </div><!-- End email input -->
+
+                <div class="form-group">
+                    <label class="control-label" for="contact-message">Message</label>
+                    <div class="controls">
+                        <textarea id="contact-message" name="comments"  placeholder="Your message" class="form-control requiredField label_better" rows="6" data-error-empty="Please enter your message"></textarea>
+                        <i class="fa fa-comment"></i>
+                    </div>
+                </div><!-- End textarea -->
+
+                <p><button name="submit" type="submit" class="btn btn-qubico btn-block" data-error-message="Error!" data-sending-message="Sending..." data-ok-message="Message Sent"><i class="fa fa-location-arrow"></i>Send Message</button></p>
+                <input type="hidden" name="submitted" id="submitted" value="true" />
+
+            </form><!-- End contact-form -->
+
+        </div>
+
+    </div>
+
+</section>
