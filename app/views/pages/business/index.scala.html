@@ -1,16 +1,21 @@
 @*
- * This template takes a single argument, a String containing a
+ * This sections takes a single argument, a String containing a
  * message to display.
  *@
 @(pageName: String)
 
 @*
- * Call the `main` template with two arguments. The first
+ * Call the `main` sections with two arguments. The first
  * argument is a `String` with the title of the page, the second
  * argument is an `Html` object containing the body of the page.
  *@
-@template.main(pageName) {
+@template.main("Home") {
 
-    @callout(pageName)
+    @sections.navbar(pageName)
+    @sections.header(pageName)
+    @sections.gst(pageName)
+    @sections.knowledgeActions(pageName)
+    @sections.incorporation(pageName)
+    @sections.actions(pageName)
 
 }
